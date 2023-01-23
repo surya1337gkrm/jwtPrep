@@ -1,0 +1,12 @@
+GET http://localhost:4000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ0OTUzMzF9.-g_GBBCweWBS1WdSr08lZ6e54D7KHPxdh8IeG10Fxcc
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username":"Maddy"
+}
+
+//use this file to send rest requests : install rest client extension in vs code.
