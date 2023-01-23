@@ -32,7 +32,7 @@ app.post('/token', (req, res, next) => {
   const refreshToken = req.body.token;
   //console.log(refreshToken)
   if (refreshToken == null) return res.sendStatus(401);
-  if (!refreshTokens.includes(refreshToken)) res.sendStatus(403);
+  if (!refreshTokens.includes(refreshToken)) return res.sendStatus(403);
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
     if (err) return res.sendStatus(403);
     //if valid, create a new access Token

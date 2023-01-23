@@ -1,11 +1,13 @@
 GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ1MDA3NzQsImV4cCI6MTY3NDUwMDc4OX0.hLz56qmuxiGnFakJrVs0bJUAnnCzOCA0DCp5bC9Lh8U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ1MDA5NTksImV4cCI6MTY3NDUwMDk3NH0.LjKJgaqptxeboElqGryWsN32otjMvWBzAaje_h0jbus
+
+###
 
 POST http://localhost:4000/token
 Content-Type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ1MDA3NDl9.wm3DhGE8rCAELf8S3-ZXqzTtNqMiNyEzQYKvYtGyThk"
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ1MDA5MzV9.FAYfbqB9KLRDmJ0Cnz4UTnpCwYdJnwrpmd4ldE7pnog"
 }
 
 ###
@@ -22,7 +24,7 @@ DELETE http://localhost:4000/logout
 Content-Type: application/json
 
 {
-    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ1MDAzMDR9.fBUmsDcr5YuQYswc7WTttiEoVIxKphjOXQ5yupVnnoc"
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWFkZHkiLCJpYXQiOjE2NzQ1MDA5MzV9.FAYfbqB9KLRDmJ0Cnz4UTnpCwYdJnwrpmd4ldE7pnog"
 }
 
 //use this file to send rest requests : install rest client extension in vs code.
