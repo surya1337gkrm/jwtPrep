@@ -53,15 +53,15 @@ app.get('/posts', authenticateToken, (req, res, next) => {
   res.json(posts.filter((post) => post.username === req.user.name));
 });
 
-app.post('/login', (req, res, next) => {
-  //handle the authentication: Login part
-  const username = req.body.username;
-  const user = { name: username };
+// app.post('/login', (req, res, next) => {
+//   //handle the authentication: Login part
+//   const username = req.body.username;
+//   const user = { name: username };
 
-  //use jwt package to create a jwt token.
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-  res.json({ accessToken });
-});
+//   //use jwt package to create a jwt token.
+//   const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+//   res.json({ accessToken });
+// });
 
 app.listen(3000, () => {
   console.log('Listening on Port 3000');
@@ -70,3 +70,8 @@ app.listen(3000, () => {
 //create random strings using crypto library in node
 // const crypto = require('crypto');
 // console.log(crypto.randomBytes(64).toString('hex').substring(1, 15));
+
+
+
+//if our accessToken is stolen, anyone with access to the accessToken can login
+//to avoid that, we need to expire our tokens and only can create new tokens only if we have a refresh token with us.
